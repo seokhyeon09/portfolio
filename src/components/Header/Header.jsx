@@ -9,7 +9,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.inner}>
         <NavLink to="/" className={styles.logo} end>
-          Your Name
+          JSH
         </NavLink>
         <nav className={styles.nav} aria-label='Main'>
           {navItems.map(({ to, label }) => (
@@ -29,8 +29,8 @@ const Header = () => {
             Resume
           </button>
           <button type='button' className={styles.btnPrimary}>
-            Hire me          
-            </button>
+            Hire me
+          </button>
           <button
             className={styles.themeToggle}
             onClick={toggleTheme}
