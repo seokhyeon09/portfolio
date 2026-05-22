@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.4rem;
+  border-radius: $radius-sm;
+  font-weight: 600;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  
+  &.primary {
+    background: $color-indigo;
+    color: $text-primary;
+    
+    &:hover {
+      background: $color-purple;
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.gradient {
+    background: $gradient-brand;
+    color: $text-primary;
+    
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  }
+
+  &.outline {
+    background: transparent;
+    border: 1px solid $border-subtle;
+    color: $text-secondary;
+
+    &:hover {
+      border-color: $color-indigo;
+      color: $text-primary;
+    }
+  }
+}

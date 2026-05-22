@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { useTheme } from '../../context/useTheme'
+import { useTheme } from '../../Context/useTheme'
 import { navItems } from '../../utils/nav'
 import styles from './Header.module.scss'
 const Header = () => {

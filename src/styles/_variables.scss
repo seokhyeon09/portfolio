@@ -1,56 +1,98 @@
-@import url(https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css);
-$base-unit: 1rem; // 10px 기준
-$font-sans: 'SUIT Variable','Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-$font-size-xs: 1.2rem; // 12px
-$font-size-sm: 1.4rem; // 14px
-$font-size-md: 1.6rem; // 16px
-$font-size-lg: 1.8rem; // 18px
-$font-size-xl: 2rem; // 20px
-$font-size-2xl: 2.4rem; // 24px
-$font-size-3xl: 3.2rem; // 32px
+// ============================
+// CSS Variables for Theme
+// ============================
+:root {
+  --bg-page: #ffffff;
+  --bg-card: #f8fafc;
+  --bg-surface: #f1f5f9;
+  --bg-avatar: #e2e8f0;
+  --bg-dark-accent: #cbd5e1;
+  --border-default: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --border-muted: #94a3b8;
+  --color-indigo: #6366f1;
+  --color-purple: #a855f7;
+  --text-primary: #0f172a;
+  --text-dimmed: rgba(15, 23, 42, 0.6);
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-icon: #94a3b8;
+}
 
+[data-theme='dark'] {
+  --bg-page: #0f0f0f;
+  --bg-card: #141414;
+  --bg-surface: #1a1a1a;
+  --bg-avatar: #1a1a2e;
+  --bg-dark-accent: #0f172a;
+  --border-default: #222222;
+  --border-subtle: #2a2a2a;
+  --border-muted: #333333;
+  --color-indigo: #6366f1;
+  --color-purple: #a855f7;
+  --text-primary: #ffffff;
+  --text-dimmed: rgba(255, 255, 255, 0.6);
+  --text-secondary: #b9b9b9;
+  --text-tertiary: #6b7280;
+  --text-icon: #9ca3af;
+}
 
-$space-1: 0.8rem; // 8px
-$space-2: 1.2rem; // 12px
-$space-3: 1.6rem; // 16px
-$space-4: 2.4rem; // 24px
-$space-5: 3.2rem; // 32px
-$space-6: 4rem; // 40px
-$space-8: 4.8rem; // 48px
-$space-10: 6.4rem; // 64px
-$space-12: 8rem; // 80px
-$space-16: 10rem; // 100px
-$space-20: 12rem; // 120px
-$space-24: 16rem; // 160px
+// ============================
+// SCSS Variables mapped to CSS
+// ============================
+$bg-page: var(--bg-page);
+$bg-card: var(--bg-card);
+$bg-surface: var(--bg-surface);
+$bg-avatar: var(--bg-avatar);
+$bg-dark-accent: var(--bg-dark-accent);
+$border-default: var(--border-default);
+$border-subtle: var(--border-subtle);
+$border-muted: var(--border-muted);
+$color-indigo: var(--color-indigo);
+$color-purple: var(--color-purple);
+$gradient-brand: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+$text-primary: var(--text-primary);
+$text-dimmed: var(--text-dimmed);
+$text-secondary: var(--text-secondary);
+$text-tertiary: var(--text-tertiary);
+$text-icon: var(--text-icon);
 
+// Typography
+$font-family-base: 'Inter', 'Pretendard', sans-serif;
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.4rem;
+$font-size-md: 1.6rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 2.0rem;
+$font-size-2xl: 2.4rem;
+$font-size-3xl: 3.2rem;
 
+// Layout
+$max-width-container: 1200px;
+$header-height: 80px;
 
-$radius-sm: 1rem;
-$radius-md: 2rem;
-$radius-lg: 3rem;
-$radius-xl: 4rem;
+// Spacing
+$space-1: 0.4rem;
+$space-2: 0.8rem;
+$space-3: 1.2rem;
+$space-4: 1.6rem;
+$space-6: 2.4rem;
+$space-8: 3.2rem;
+$space-10: 4rem;
+$space-16: 6.4rem;
+$space-20: 8rem;
+
+// Borders
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
 $radius-full: 9999px;
 
+// Shadows
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
-$color-primary: #7c3aed;
-$color-primary-hover: #6d28d9;
-
-$color-success: #10b981;
-$color-info: #3b82f6;
-$color-warning: #f59e0b;
-$color-danger: #ef4444;
-
-$shadow-sm: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05);
-$shadow-md: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
-
-$breakpoint-sm: 64rem;
-$breakpoint-md: 76.8rem;
-$breakpoint-lg: 102.4rem;
-$breakpoint-xl: 128rem;
-$breakpoint-2xl: 160rem;
-
-
-$transition-theme: color 0.2s ease, background-color 0.2s ease,
-  border-color 0.2s ease, box-shadow 0.2s ease;
+// Breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
