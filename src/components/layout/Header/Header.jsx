@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import Button from '../../ui/Button/Button';
-import { ThemeContext } from '../../../Context/themeContext';
+import { ThemeContext } from '../../../context/themeContext';
 import { navItems } from '../../../utils/nav';
 
 const Header = () => {
