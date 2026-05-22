@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Skills.module.scss';
 import Card from '../../ui/Card/Card';
 import { skillData } from '../../../utils/skillData';
+import { icons } from '../../../utils/icons';
 
 const Skills = () => {
   return (
@@ -20,7 +21,9 @@ const Skills = () => {
           {skillData.map((category, idx) => (
             <Card key={idx} className={styles.categoryCard}>
               <div className={styles.cardHeader}>
-                <span className={styles.icon}>{category.icon}</span>
+                <span className={styles.icon}>
+                  {icons[category.icon] ? icons[category.icon]({ width: 24, height: 24 }) : null}
+                </span>
                 <h3>{category.title}</h3>
               </div>
               <div className={styles.skillTags}>

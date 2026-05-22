@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import Button from '../../ui/Button/Button';
 import { ThemeContext } from '../../../Context/themeContext';
+import { navItems } from '../../../utils/nav';
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -15,11 +16,13 @@ const Header = () => {
         </div>
         <nav className={styles.nav}>
           <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About me</NavLink></li>
-            <li><NavLink to="/skills">Skill</NavLink></li>
-            <li><NavLink to="/projects">Project</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
+            {navItems.map((item, idx) => (
+              <li key={idx}>
+                <NavLink to={item.to} end={item.to === '/'}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className={styles.actions}>

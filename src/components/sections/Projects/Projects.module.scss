@@ -25,6 +25,31 @@
     z-index: 1;
   }
 
+  .header {
+    margin-bottom: $space-10;
+
+    .sectionLabel {
+      color: $color-indigo;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-bottom: $space-2;
+      text-transform: uppercase;
+    }
+
+    .sectionTitle {
+      font-size: 3.2rem;
+      margin-bottom: $space-4;
+    }
+
+    .description {
+      color: $text-secondary;
+      line-height: 1.8;
+      font-size: 1.6rem;
+      max-width: 600px;
+    }
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
