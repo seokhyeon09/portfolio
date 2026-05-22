@@ -1,0 +1,37 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.footer {
+  padding: $space-10 0;
+  border-top: 1px solid $border-default;
+  background-color: $bg-page;
+  text-align: center;
+
+  .container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-6;
+  }
+
+  .links {
+    display: flex;
+    gap: $space-6;
+    
+    a {
+      color: $text-secondary;
+      font-size: 1.4rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $text-primary;
+      }
+    }
+  }
+
+  .copyright {
+    color: $text-tertiary;
+    font-size: 1.2rem;
+  }
+}

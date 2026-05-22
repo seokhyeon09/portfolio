@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.card {
+  background-color: $bg-card;
+  border: 1px solid $border-default;
+  border-radius: $radius-lg;
+  padding: $space-4;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $border-subtle;
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}

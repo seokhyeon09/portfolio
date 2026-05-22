@@ -1,15 +1,14 @@
-
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
-import Home from "./pages/Home"
+import Home from "./pages/Home/Home"
 import About from './pages/About'
 import Contact from './pages/Contact'
 import ProjectsPages from "./pages/ProjectsPages"
 import Skills from "./pages/Skills"
 import PlaceholderPage from "./pages/PlaceholderPage"
-import Blogs from './pages/Blogs'
-import ThemeProvider from './context/ThemeProvider'
+import ThemeProvider from './Context/ThemeProvider'
 
-import Layout from './components/layout/Layout'
+import Header from './components/layout/Header/Header'
+import Footer from './components/layout/Footer/Footer'
 
 function NotFound() {
   return (
@@ -20,24 +19,21 @@ function NotFound() {
   )
 }
 
-
 function App() {
-
-
   return (
     <BrowserRouter>
       <ThemeProvider>
+        <Header />
         <Routes>
-          <Route element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="projects" element={<ProjectsPages />} />
-            <Route path="skills" element={<Skills />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="404" element={<NotFound />} />
-            <Route path="*" element={<Navigate to="/404" replace />} />
-          </Route>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<ProjectsPages />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   )
