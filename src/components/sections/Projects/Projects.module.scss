@@ -137,11 +137,20 @@
           font-size: 1.3rem;
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 0.5rem;
-          transition: color 0.3s ease;
+          padding: 0.6rem 1.2rem;
+          border: 1px solid $border-default;
+          border-radius: $radius-md;
+          transition: all 0.3s ease;
+          background: transparent;
+          font-weight: 500;
+          text-decoration: none;
           
           &:hover {
+            border-color: $color-purple;
             color: $color-purple;
+            background: rgba($color-purple, 0.05);
           }
         }
       }

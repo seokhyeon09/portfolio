@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Contact.module.scss';
 import Button from '../../ui/Button/Button';
+import { socialLinks } from '../../../utils/nav';
 
 const Contact = () => {
+  const navigate = useNavigate();
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
@@ -23,21 +26,33 @@ const Contact = () => {
           </p>
 
           <div className={styles.actions}>
-            <Button variant="primary" className={styles.emailBtn}>
+            <Button 
+              variant="primary" 
+              className={styles.emailBtn}
+              onClick={() => navigate('/contact')}
+            >
               이메일 보내기
             </Button>
-            <Button variant="outline" className={styles.socialBtn}>
-              링크드인 프로필
+            <Button 
+              variant="outline" 
+              className={styles.socialBtn}
+              onClick={() => window.open(socialLinks.notion, '_blank')}
+            >
+              노션 포트폴리오
             </Button>
-            <Button variant="outline" className={styles.socialBtn}>
+            <Button 
+              variant="outline" 
+              className={styles.socialBtn}
+              onClick={() => window.open(socialLinks.github, '_blank')}
+            >
               깃허브
             </Button>
           </div>
           
           <div className={styles.contactInfo}>
-            <span>github.com/jsh-dev</span>
-            <span>@jsh-dev</span>
-            <span>contact@jsh-dev.io</span>
+            <span>github.com/YourID</span>
+            <span>notion.so/YourID</span>
+            <span>contact@example.com</span>
           </div>
         </div>
       </div>
