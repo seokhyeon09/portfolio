@@ -5,7 +5,7 @@ import Contact from './pages/Contact'
 import ProjectsPages from "./pages/ProjectsPages"
 import Skills from "./pages/Skills"
 import PlaceholderPage from "./pages/PlaceholderPage"
-import ThemeProvider from './Context/ThemeProvider'
+import ThemeProvider from './context/ThemeProvider'
 
 import Header from './components/layout/Header/Header'
 import Footer from './components/layout/Footer/Footer'
