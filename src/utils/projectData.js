@@ -2,29 +2,29 @@ export const featuredProjects = [
   {
     id: 1,
     title: 'Cooling Spot',
-    description: 'Full-stack shopping app with payment integration and inventory management. This project focuses on providing a seamless e-commerce experience.',
-    tags: ['Next.js', 'Prisma', 'Stripe'],
-    demoLink: '#',
-    codeLink: '#',
-    image: 'Movement that Inspires'
+    description: '서울시 내 무더위 쉼터 위치를 시각적으로 제공하고, 원하는 장소를 검색 및 즐겨찾기 할 수 있는 지도 기반 웹 애플리케이션입니다.',
+    tags: ['React', 'Kakao Maps API'],
+    demoLink: 'https://miniproject-coolingcenter.vercel.app/map',
+    codeLink: 'https://github.com/seokhyeon09/miniproject-coolingcenter',
+    image: 'Cooling Spot'
   },
   {
     id: 2,
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website built with React and Framer Motion, featuring a modern dark theme, smooth scroll animations, and a responsive layout.',
-    tags: ['React', 'SCSS', 'Framer Motion'],
-    demoLink: '#',
-    codeLink: '#',
-    image: 'JSH Portfolio'
+    title: 'Kia selling',
+    description: '기아(Kia)의 차량 판매 및 브랜드 홍보를 위한 웹사이트를 프론트엔드 관점에서 새롭게 리디자인한 프로젝트입니다.',
+    tags: ['React', 'SCSS', 'Swiper'],
+    demoLink: 'https://react-tocobo-kia-ver.vercel.app/',
+    codeLink: 'https://github.com/seokhyeon09/react-tocobo-kia-ver',
+    image: 'Kia selling'
   },
   {
     id: 3,
-    title: 'Task Management System',
-    description: 'A collaborative task management tool with real-time updates, drag-and-drop kanban boards, and team role-based access control.',
-    tags: ['React', 'Node.js', 'Socket.io'],
-    demoLink: '#',
-    codeLink: '#',
-    image: 'Manage Your Work'
+    title: 'Save Point',
+    description: '잊지 못할 게임의 순간들, 당신의 여정을 저장할 SavePoint 프로젝트입니다.',
+    tags: ['React', 'Spring Boot', 'AWS S3', 'Kakao Login api'],
+    demoLink: 'http://savepoint.kro.kr/',
+    codeLink: 'https://github.com/seokhyeon09/project-savepoint',
+    image: 'Save Point'
   }
 ];
 
