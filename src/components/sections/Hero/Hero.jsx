@@ -1,9 +1,13 @@
 import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import styles from './Hero.module.scss';
 import Button from '../../ui/Button/Button';
 import Card from '../../ui/Card/Card';
+import { socialLinks } from '../../../utils/nav';
+import { icons } from '../../../utils/icons';
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.container}>
@@ -18,20 +22,25 @@ const Hero = () => {
             보이지 않는 곳의 효율적인 로직까지, 끈질기게 파고들어 문제를 해결합니다.
           </p>
           <div className={styles.actions}>
-            <Button variant="primary">View Projects &rarr;</Button>
-            <Button variant="outline">About Me</Button>
+            <Button variant="primary" onClick={() => navigate('/projects')}>View Projects &rarr;</Button>
+            <Button variant="outline" onClick={() => navigate('/about')}>About Me</Button>
           </div>
           <div className={styles.socials}>
-            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
-              {/* GitHub Icon placeholder */}
-              <div className={styles.iconPlaceholder}>GH</div>
+            <a href={socialLinks.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+              <div className={styles.iconPlaceholder}>
+                {icons.github({ width: 22, height: 22 })}
+              </div>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <div className={styles.iconPlaceholder}>IN</div>
+            <a href={socialLinks.notion} target="_blank" rel="noreferrer" aria-label="Notion">
+              <div className={styles.iconPlaceholder}>
+                {icons.laptop({ width: 22, height: 22 })}
+              </div>
             </a>
-            <a href="mailto:email@example.com" aria-label="Email">
-              <div className={styles.iconPlaceholder}>@</div>
-            </a>
+            <Link to="/contact" aria-label="Contact">
+              <div className={styles.iconPlaceholder}>
+                {icons.mail({ width: 22, height: 22 })}
+              </div>
+            </Link>
           </div>
         </div>
         
