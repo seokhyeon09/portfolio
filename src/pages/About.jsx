@@ -10,6 +10,7 @@ import {
     aboutBanner 
 } from '../utils/aboutContent'
 import { icons } from '../utils/icons'
+import FadeUp from '../components/ui/FadeUp/FadeUp'
 
 const About = () => {
   const navigate = useNavigate()
@@ -19,7 +20,8 @@ const About = () => {
       <div className={styles.container}>
         
         {/* Header Section */}
-        <section className={styles.header}>
+        <FadeUp delay={0.1}>
+          <section className={styles.header}>
           <span className={styles.label}>{aboutHeader.label}</span>
           <h1 className={styles.title}>{aboutHeader.title}</h1>
           <div className={styles.descriptions}>
@@ -27,10 +29,12 @@ const About = () => {
               <p key={idx}>{desc}</p>
             ))}
           </div>
-        </section>
+          </section>
+        </FadeUp>
 
         {/* Grid Layout Section */}
-        <section className={styles.grid}>
+        <FadeUp delay={0.2}>
+          <section className={styles.grid}>
           
           {/* Left Column */}
           <div className={styles.column}>
@@ -124,10 +128,12 @@ const About = () => {
             </div>
           </div>
           
-        </section>
+          </section>
+        </FadeUp>
 
         {/* CTA Banner */}
-        <section className={styles.banner}>
+        <FadeUp delay={0.3}>
+          <section className={styles.banner}>
           <span className={styles.badge}>{aboutBanner.badge}</span>
           <h2>{aboutBanner.title}</h2>
           <p>{aboutBanner.desc}</p>
@@ -138,8 +144,9 @@ const About = () => {
             <button className={styles.secondaryBtn} onClick={() => navigate('/contact')}>
               <icons.mail /> 협업 문의하기
             </button>
-          </div>
-        </section>
+            </div>
+          </section>
+        </FadeUp>
 
       </div>
     </div>

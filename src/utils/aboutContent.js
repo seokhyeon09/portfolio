@@ -63,7 +63,7 @@ export const timelineInfo = {
 export const educationInfo = {
     title: '학력',
     icon: icons.graduation, // assuming graduation cap
-    school: '경북대학교',
+    school: '경복대학교',
     major: '소프트웨어 융합과',
     range: '2022 — 2026'
 }

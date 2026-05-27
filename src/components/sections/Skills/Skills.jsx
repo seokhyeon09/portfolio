@@ -3,6 +3,7 @@ import styles from './Skills.module.scss';
 import Card from '../../ui/Card/Card';
 import { skillData } from '../../../utils/skillData';
 import { icons } from '../../../utils/icons';
+import FadeInLeft from '../../ui/FadeInLeft/FadeInLeft';
 
 const Skills = () => {
   return (
@@ -28,7 +29,9 @@ const Skills = () => {
               </div>
               <div className={styles.skillTags}>
                 {category.skills.map((skill, i) => (
-                  <span key={i} className={styles.tag}>{skill}</span>
+                  <FadeInLeft key={i} delay={0.2 + (i * 0.1)}>
+                    <span className={styles.tag}>{skill.name}</span>
+                  </FadeInLeft>
                 ))}
               </div>
             </Card>
