@@ -1,0 +1,353 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+$color-success: #10b981;
+$color-warning: #f59e0b;
+
+.aboutPage {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $space-16;
+
+  .label {
+    display: inline-block;
+    color: $color-indigo;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: $space-4;
+  }
+
+  .title {
+    font-size: 4.8rem;
+    font-weight: 800;
+    margin-bottom: $space-8;
+    color: $text-primary;
+    
+    @include mobile {
+      font-size: 3.6rem;
+    }
+  }
+
+  .descriptions {
+    max-width: 700px;
+    margin: 0 auto;
+    
+    p {
+      color: $text-secondary;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      margin-bottom: $space-2;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-6;
+  margin-bottom: 4.8rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+}
+
+.card {
+  background: $bg-card;
+  border: 1px solid $border-default;
+  border-radius: $radius-lg;
+  padding: $space-8;
+  height: 100%;
+
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+    margin-bottom: $space-6;
+
+    .iconWrapper {
+      width: 40px;
+      height: 40px;
+      background: rgba(99, 102, 241, 0.1);
+      color: $color-indigo;
+      border-radius: $radius-md;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &.success {
+        background: rgba($color-success, 0.1);
+        color: $color-success;
+      }
+      &.warning {
+        background: rgba($color-warning, 0.1);
+        color: $color-warning;
+      }
+      &.purple {
+        background: rgba(168, 85, 247, 0.1);
+        color: $color-purple;
+      }
+    }
+
+    .cardTitleWrapper {
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: $space-1;
+      }
+      span {
+        color: $text-tertiary;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.aboutDesc {
+  color: $text-secondary;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.coreValuesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-4;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .valueItem {
+    background: $bg-surface;
+    border: 1px solid $border-subtle;
+    border-radius: $radius-md;
+    padding: $space-4;
+
+    .valueHeader {
+      display: flex;
+      align-items: center;
+      gap: $space-2;
+      margin-bottom: $space-3;
+      font-weight: 600;
+      font-size: 1.4rem;
+      
+      .valueIcon {
+        color: $color-indigo;
+      }
+      .valueIconSuccess { color: $color-success; }
+      .valueIconWarning { color: $color-warning; }
+      .valueIconPurple { color: $color-purple; }
+    }
+
+    p {
+      color: $text-tertiary;
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+  position: relative;
+  padding-left: $space-4;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    bottom: 0;
+    width: 2px;
+    background: $border-default;
+  }
+
+  .timelineItem {
+    position: relative;
+
+    .dot {
+      position: absolute;
+      left: -20px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .range {
+      display: inline-block;
+      background: $bg-surface;
+      padding: 0.2rem 1rem;
+      border-radius: $radius-full;
+      font-size: 1.2rem;
+      color: $text-tertiary;
+      border: 1px solid $border-subtle;
+      margin-bottom: $space-2;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: $space-1;
+    }
+
+    .company {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: $space-2;
+    }
+
+    .desc {
+      color: $text-secondary;
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+.education {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-4;
+  }
+
+  .schoolInfo {
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: $space-1;
+    }
+    p {
+      color: $color-indigo;
+      font-size: 1.4rem;
+    }
+  }
+
+  .badge {
+    background: rgba($color-indigo, 0.1);
+    color: $color-indigo;
+    padding: 0.4rem 1.6rem;
+    border-radius: $radius-full;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+.banner {
+  background: linear-gradient(135deg, rgba(20, 16, 50, 1) 0%, rgba(31, 24, 76, 1) 100%);
+  border: 1px solid rgba(138, 115, 255, 0.2);
+  border-radius: 24px;
+  padding: 4.8rem $space-8;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -20%, rgba(138, 115, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.6rem 2rem;
+    border-radius: $radius-full;
+    font-size: 1.4rem;
+    margin-bottom: $space-6;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: $space-4;
+    
+    @include mobile {
+      font-size: 2.4rem;
+    }
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.6rem;
+    margin-bottom: $space-10;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: $space-4;
+    
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .primaryBtn {
+      background: $color-purple;
+      color: white;
+      border: none;
+      padding: 1.2rem 3.2rem;
+      border-radius: $radius-md;
+      font-size: 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        filter: brightness(1.1);
+        transform: translateY(-2px);
+      }
+    }
+    
+    .secondaryBtn {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 1.2rem 3.2rem;
+      border-radius: $radius-md;
+      font-size: 1.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
