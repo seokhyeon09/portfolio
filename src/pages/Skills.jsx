@@ -126,7 +126,7 @@ const Skills = () => {
         {/* CTA Banner */}
         <FadeUp delay={0.3}>
           <section className={styles.banner}>
-          <span className={styles.badge}>{skillsBanner.badge}</span>
+          <span className={styles.badge}><icons.rocket size={16} style={{marginRight: '6px', marginBottom: '-2px'}} />{skillsBanner.badge}</span>
           <h2>{skillsBanner.title}</h2>
           <p>{skillsBanner.desc}</p>
           <div className={styles.actions}>

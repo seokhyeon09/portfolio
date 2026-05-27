@@ -134,7 +134,7 @@ const About = () => {
         {/* CTA Banner */}
         <FadeUp delay={0.3}>
           <section className={styles.banner}>
-          <span className={styles.badge}>{aboutBanner.badge}</span>
+          <span className={styles.badge}><icons.rocket size={16} style={{marginRight: '6px', marginBottom: '-2px'}} />{aboutBanner.badge}</span>
           <h2>{aboutBanner.title}</h2>
           <p>{aboutBanner.desc}</p>
           <div className={styles.actions}>

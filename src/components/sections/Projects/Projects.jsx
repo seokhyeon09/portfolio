@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Projects.module.scss';
 import Card from '../../ui/Card/Card';
+import Mockup from '../../ui/Mockup/Mockup';
 import { featuredProjects } from '../../../utils/projectData';
 
 const Projects = () => {
@@ -19,11 +20,12 @@ const Projects = () => {
           {featuredProjects.map((project, idx) => (
             <Card key={project.id || idx} className={styles.projectCard}>
               <div className={styles.imagePlaceholder}>
-                <div className={styles.mockup}>
-                  <div className={styles.screen}>
-                    <span>{project.image}</span>
-                  </div>
-                </div>
+                <Mockup 
+                  type={project.deviceType}
+                  imageSrc={project.imageSrc}
+                  fallbackIcon={project.fallbackIcon}
+                  title={project.fallbackText || project.title}
+                />
               </div>
               <div className={styles.content}>
                 <h3>{project.title}</h3>

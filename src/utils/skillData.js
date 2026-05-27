@@ -121,7 +121,7 @@ export const learningSkills = {
 };
 
 export const skillsBanner = {
-    badge: '🚀 함께 만들어요',
+    badge: '함께 만들어요',
     title: '이 기술들로 만든 프로젝트가 궁금하신가요?',
     desc: '직접 구현한 프로젝트들을 확인해보세요.',
 }

@@ -2,7 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home/Home"
 import About from './pages/About'
 import Contact from './pages/Contact'
-import ProjectsPages from "./pages/ProjectsPages"
+import Projects from "./pages/Projects"
 import Skills from "./pages/Skills"
 import PlaceholderPage from "./pages/PlaceholderPage"
 import ThemeProvider from './context/ThemeProvider'
@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<ProjectsPages />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/404" element={<NotFound />} />

@@ -69,7 +69,7 @@ export const educationInfo = {
 }
 
 export const aboutBanner = {
-    badge: '🚀 함께 만들어요',
+    badge: '새로운 협업을 기다리고 있어요',
     title: '제가 어떤 기술을 갖고있는지 궁금하신가요?',
     desc: '제 기술들을 확인해보세요',
 }

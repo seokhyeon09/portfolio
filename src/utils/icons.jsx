@@ -114,25 +114,16 @@ export const icons = {
     ),
 
     trend: (props) => (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
-            <path
-                d="M4 16v3h3m13-7v3h-3M5 19l5-5m4-4 5-5"
-                stroke="currentColor"
-                strokeWidth="1.75"
-                strokeLinecap="round"
-            />
-            <path d="M15 14h6v-6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+            <polyline points="17 6 23 6 23 12" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     ),
     external: (props) => (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
-            <path
-                d="M14 3h7v7m0-7L10 14M5 5l14 14"
-                stroke="currentColor"
-                strokeWidth="1.75"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+            <polyline points="15 3 21 3 21 9" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+            <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     ),
 
@@ -259,5 +250,66 @@ export const icons = {
             />
         </svg>
     ),
-
+    layout: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="1.75" />
+            <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" strokeWidth="1.75" />
+            <line x1="9" y1="21" x2="9" y2="9" stroke="currentColor" strokeWidth="1.75" />
+        </svg>
+    ),
+    car: (props) => (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a2 2 0 0 0-1.6-.8H9.3a2 2 0 0 0-1.6.8L5 11l-5.16.86a1 1 0 0 0-.84.99V16h3m10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM5 16a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
+        </svg>
+    ),
+    mapPin: (props) => (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+        </svg>
+    ),
+    gamepad: (props) => (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <line x1="6" y1="12" x2="10" y2="12" />
+            <line x1="8" y1="10" x2="8" y2="14" />
+            <line x1="15" y1="13" x2="15.01" y2="13" />
+            <line x1="18" y1="11" x2="18.01" y2="11" />
+            <rect x="2" y="6" width="20" height="12" rx="2" />
+        </svg>
+    ),
+    checkSquare: (props) => (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <polyline points="9 11 12 14 22 4" />
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+        </svg>
+    ),
+    smile: (props) => (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+        </svg>
+    ),
+    cloudSun: (props) => (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <path d="M12 2v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="m4.93 19.07 1.41-1.41" />
+            <path d="M12 22v-2" />
+            <path d="m19.07 19.07-1.41-1.41" />
+            <path d="M22 12h-2" />
+            <path d="m19.07 4.93-1.41 1.41" />
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+        </svg>
+    ),
+    rocket: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+        </svg>
+    ),
 }
