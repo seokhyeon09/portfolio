@@ -28,7 +28,7 @@ const ContactForm = () => {
       
       <form 
         className={styles.form} 
-        action="https://formspree.io/f/YOUR_FORM_ID_HERE" 
+        action="https://formspree.io/f/xlgznzdn" 
         method="POST"
       >
         <div className={styles.row}>

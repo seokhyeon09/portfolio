@@ -24,11 +24,11 @@ export const socialLinks = [
     ]
   },
   {
-    id: 'linkedin',
-    icon: 'linkedIn',
-    title: 'LinkedIn',
-    desc: 'linkedin.com/in/minjundev',
-    url: 'https://linkedin.com/in/minjundev'
+    id: 'notion',
+    icon: 'notion',
+    title: 'Notion',
+    desc: 'notion.so/minjundev',
+    url: 'https://notion.so/minjundev'
   },
   {
     id: 'email',

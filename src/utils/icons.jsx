@@ -118,6 +118,11 @@ export const icons = {
             <path d="M6.5 6.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM4 9h5v11H4V9zm7 0h4.7v1.5h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.1V20h-5v-5.6c0-1.3 0-3-1.8-3-1.9 0-2.2 1.4-2.2 2.9V20h-5V9z" />
         </svg>
     ),
+    notion: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+            <path d="M4.156 3.149c-.286 0-.584.093-.836.319l-1.037 1.054v.172h1.611l.245-.239h1.761c.427 0 .546.121.546.586v13.628l-.307.319h-1.61v.172l3.411 1.026v-.172h-.244c-.461 0-.616-.142-.616-.586V6.155l6.505 13.916 6.326-1.206V5.419l.345-.333h1.564v-.172l-4.144-.654v.172l.48.37c.307.25.426.333.426.685v11.83l-5.619-12.79c-.198-.445-.441-.653-.873-.653z" />
+        </svg>
+    ),
     send: (props) => (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
             <path
@@ -236,6 +241,32 @@ export const icons = {
             <path d="M10.5 21v-3"></path>
             <path d="M13.5 21v-3"></path>
             <path d="M12 3a6 6 0 0 0-6 6c0 3 2.5 5 2.5 5h7s2.5-2 2.5-5a6 6 0 0 0-6-6z"></path>
+        </svg>
+    ),
+    pin: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
+            <path
+                d="M12 21s7-4.35 7-10a7 7 0 1 0-14 0c0 5.65 7 10 7 10z"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <circle cx="12" cy="11" r="2" stroke="currentColor" strokeWidth="1.75" />
+        </svg>
+    ),
+    monitor: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
+            <rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.75" />
+            <path d="M8 20h8M12 16v4" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+        </svg>
+    ),
+    server: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
+            <rect x="4" y="4" width="16" height="5" rx="1" stroke="currentColor" strokeWidth="1.75" />
+            <rect x="4" y="10" width="16" height="5" rx="1" stroke="currentColor" strokeWidth="1.75" />
+            <circle cx="8" cy="6.5" r="0.75" fill="currentColor" />
+            <circle cx="8" cy="12.5" r="0.75" fill="currentColor" />
         </svg>
     ),
 }
