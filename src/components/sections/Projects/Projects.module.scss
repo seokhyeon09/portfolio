@@ -52,8 +52,16 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: $space-6;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   .projectCard {
@@ -62,37 +70,13 @@
     display: flex;
     flex-direction: column;
 
-    .imagePlaceholder {
+      .imagePlaceholder {
       background: $bg-surface;
       height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: $space-4;
-
-      .mockup {
-        width: 100%;
-        max-width: 250px;
-        aspect-ratio: 16/10;
-        background: $bg-card;
-        border-radius: $radius-sm $radius-sm 0 0;
-        border: 4px solid $border-default;
-        border-bottom: 8px solid $border-subtle;
-        position: relative;
-
-        .screen {
-          background: $bg-page;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: $text-primary;
-          font-weight: bold;
-          text-align: center;
-          font-size: 1.2rem;
-        }
-      }
     }
 
     .content {
@@ -116,6 +100,7 @@
 
       .tags {
         display: flex;
+        flex-wrap: wrap;
         gap: $space-2;
         margin-bottom: $space-6;
 

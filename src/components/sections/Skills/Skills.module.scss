@@ -52,7 +52,14 @@
       margin-bottom: $space-4;
       
       .icon {
-        font-size: 2rem;
+        width: 36px;
+        height: 36px;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: $radius-sm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-indigo;
       }
 
       h3 {
@@ -67,8 +74,8 @@
       gap: $space-2;
 
       .tag {
-        background: rgba($color-indigo, 0.1);
-        border: 1px solid rgba($color-indigo, 0.2);
+        background: rgba(99, 102, 241, 0.1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
         color: $text-secondary;
         padding: 0.4rem 1.2rem;
         border-radius: $radius-full;
@@ -76,7 +83,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background: rgba($color-indigo, 0.2);
+          background: rgba(99, 102, 241, 0.2);
           color: $text-primary;
           border-color: $color-indigo;
         }
