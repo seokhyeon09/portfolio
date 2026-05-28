@@ -312,4 +312,30 @@ export const icons = {
             <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
         </svg>
     ),
+    clock: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+    ),
+    checkCircle: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+    ),
+    code: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+    ),
+    lightbulb: (props) => (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+            <path d="M9 21h6"></path>
+            <path d="M10.5 21v-3"></path>
+            <path d="M13.5 21v-3"></path>
+            <path d="M12 3a6 6 0 0 0-6 6c0 3 2.5 5 2.5 5h7s2.5-2 2.5-5a6 6 0 0 0-6-6z"></path>
+        </svg>
+    ),
 }

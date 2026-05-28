@@ -1,0 +1,159 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.formContainer {
+  background: $bg-card;
+  border: 1px solid $border-default;
+  border-radius: $radius-lg;
+  padding: $space-8;
+
+  .formHeader {
+    margin-bottom: $space-8;
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $text-primary;
+      margin-bottom: $space-2;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $text-secondary;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $space-4;
+      
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      gap: $space-2;
+
+      label {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $text-primary;
+        display: flex;
+        align-items: center;
+
+        .required {
+          color: $color-indigo;
+          margin-left: 0.4rem;
+        }
+      }
+
+      .inputWrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          position: absolute;
+          left: 1.6rem;
+          color: $text-tertiary;
+        }
+
+        input, select, textarea {
+          width: 100%;
+          background: $bg-surface;
+          border: 1px solid $border-subtle;
+          border-radius: $radius-md;
+          padding: 1.6rem 1.6rem 1.6rem 4.8rem;
+          color: $text-primary;
+          font-size: 1.5rem;
+          transition: all 0.2s ease;
+          
+          &::placeholder {
+            color: $text-tertiary;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: $color-purple;
+            box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+          }
+        }
+        
+        select {
+          appearance: none;
+        }
+        
+        .selectIcon {
+          position: absolute;
+          right: 1.6rem;
+          color: $text-tertiary;
+          pointer-events: none;
+        }
+
+        textarea {
+          padding-left: 1.6rem;
+          min-height: 150px;
+          resize: vertical;
+        }
+      }
+      
+      .charCount {
+        text-align: right;
+        font-size: 1.2rem;
+        color: $text-tertiary;
+        margin-top: 0.4rem;
+      }
+    }
+
+    .formFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: $space-4;
+      
+      @include mobile {
+        flex-direction: column-reverse;
+        gap: $space-6;
+        align-items: stretch;
+      }
+
+      .privacyInfo {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.3rem;
+        color: #10b981; // Green
+      }
+
+      .submitBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background: $color-purple;
+        color: white;
+        border: none;
+        padding: 1.6rem 3.2rem;
+        border-radius: $radius-md;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          filter: brightness(1.1);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
