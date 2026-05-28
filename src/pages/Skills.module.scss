@@ -108,9 +108,9 @@ $color-warning: #f59e0b;
           border-radius: $radius-full;
           background: rgba(255,255,255, 0.1);
 
-          &.expert { color: #10b981; background: rgba(16, 185, 129, 0.1); }
-          &.advanced { color: #6366f1; background: rgba(99, 102, 241, 0.1); }
-          &.intermediate { color: #eab308; background: rgba(234, 179, 8, 0.1); }
+          &.advanced { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+          &.intermediate { color: #6366f1; background: rgba(99, 102, 241, 0.1); }
+          &.basic { color: #eab308; background: rgba(234, 179, 8, 0.1); }
           &.learning { color: #64748b; background: rgba(100, 116, 139, 0.1); }
         }
       }

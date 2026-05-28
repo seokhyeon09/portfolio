@@ -1,11 +1,11 @@
 export const projectsHeader = {
     label: 'MY PROJECTS',
-    title: '직접 만든 것들',
-    desc: '아이디어를 코드로, 코드를 서비스로. 개발 과정에서 배운 것들을 녹여낸 프로젝트들입니다.',
+    title: '직접 부딪히며 만든 결과물',
+    desc: '문제를 정의하고 해결하기 위해 치열하게 고민했던 과정을 담은 프로젝트들입니다.',
     stats: [
-        { value: '6', label: 'Total Projects' },
-        { value: '5', label: 'Tech Stacks' },
-        { value: '2024', label: 'Latest Work' },
+        { value: '8', label: '전체 프로젝트' },
+        { value: '5', label: '기술 스택' },
+        { value: '2026', label: '최근 작업 연도' },
     ]
 };
 
@@ -40,7 +40,7 @@ export const allProjects = [
     codeLink: 'https://github.com/seokhyeon09/miniproject-coolingcenter',
     imageSrc: '', 
     fallbackIcon: 'mapPin',
-    deviceType: 'mobile'
+    deviceType: 'desktop'
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ export const allProjects = [
     codeLink: 'https://github.com/seokhyeon09/project-savepoint',
     imageSrc: '', 
     fallbackIcon: 'gamepad',
-    deviceType: 'tablet'
+    deviceType: 'desktop'
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ export const allProjects = [
     codeLink: '#',
     imageSrc: '', 
     fallbackIcon: 'checkSquare',
-    deviceType: 'mobile'
+    deviceType: 'desktop'
   },
   {
     id: 5,
@@ -76,7 +76,7 @@ export const allProjects = [
     codeLink: '#',
     imageSrc: '', 
     fallbackIcon: 'smile',
-    deviceType: 'mobile'
+    deviceType: 'desktop'
   },
   {
     id: 6,
@@ -89,6 +89,30 @@ export const allProjects = [
     imageSrc: '', 
     fallbackIcon: 'cloudSun',
     deviceType: 'desktop'
+  },
+  {
+    id: 7,
+    title: 'Movie DB explorer',
+    description: 'TMDB API를 활용해 최신 영화 트렌드를 확인하고 검색할 수 있는 서비스입니다.',
+    tags: ['React', 'REST API'],
+    type: 'web',
+    demoLink: '#',
+    codeLink: '#',
+    imageSrc: '',
+    fallbackIcon: 'laptop',
+    deviceType: 'desktop'
+  },
+  {
+    id: 8,
+    title: 'Portfolio V1',
+    description: '지금 보고 계신 이 포트폴리오 웹사이트입니다. 반응형 디자인과 재사용 가능한 컴포넌트 구조로 설계했습니다.',
+    tags: ['React', 'SCSS'],
+    type: 'web',
+    demoLink: '#',
+    codeLink: '#',
+    imageSrc: '',
+    fallbackIcon: 'layout',
+    deviceType: 'desktop'
   }
 ];
 
@@ -96,7 +120,7 @@ export const allProjects = [
 export const featuredProjects = allProjects.slice(0, 3);
 
 export const projectsBanner = {
-    badge: '새로운 협업을 기다리고 있어요',
-    title: '아직 망설이고 있나요?',
-    desc: '부담 없이 간단한 인사 메시지만 보내도 괜찮습니다. 좋은 인연은 작은 대화에서 시작됩니다.',
+    badge: '어떤가요?',
+    title: '저의 성장은 현재 진행형입니다.',
+    desc: '좋은 팀에서 훌륭한 시너지를 내며 함께 성장하고 싶습니다.',
 };

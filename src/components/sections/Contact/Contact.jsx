@@ -13,7 +13,7 @@ const Contact = () => {
           <h4 className={styles.sectionLabel}>CONTACT</h4>
           <h2 className={styles.sectionTitle}>Let's Work Together</h2>
           <p className={styles.description}>
-            Have a project in mind? Let's talk.
+            협업을 원하시나요? 언제든 환영합니다.
           </p>
         </div>
 
@@ -21,8 +21,8 @@ const Contact = () => {
           <div className={styles.badge}>✉ 함께 할게요</div>
           <h3 className={styles.mainHeading}>함께하길 고대하겠습니다.</h3>
           <p className={styles.subtext}>
-            풀스택 웹앱, API 연동부터 제품 전체를 처음부터<br/>
-            함께 만들어 드릴 수 있습니다. 언제든지 연락주세요.
+            좋은 시너지를 낼 수 있는 팀을 찾고 있습니다.<br/>
+            언제든지 편하게 연락주세요!
           </p>
 
           <div className={styles.actions}>
@@ -50,9 +50,9 @@ const Contact = () => {
           </div>
           
           <div className={styles.contactInfo}>
-            <span>github.com/YourID</span>
-            <span>notion.so/YourID</span>
-            <span>contact@example.com</span>
+            <span>github.com/seokhyeon09</span>
+            <span></span>
+            <span>ring4392@gmail.com</span>
           </div>
         </div>
       </div>

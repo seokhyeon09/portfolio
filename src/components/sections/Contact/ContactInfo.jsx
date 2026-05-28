@@ -8,8 +8,8 @@ const ContactInfo = () => {
     <div className={styles.infoContainer}>
       {/* Social Links */}
       <div>
-        <h3 className={styles.sectionTitle}>소셜 링크</h3>
         <div className={styles.socialCard}>
+          <h3 className={styles.sectionTitle} style={{ margin: '1.6rem 1.6rem 0.8rem' }}>소셜 링크</h3>
           {socialLinks.map((social) => {
             const SocialIcon = icons[social.icon];
             return (
@@ -74,7 +74,7 @@ const ContactInfo = () => {
             {currentStatus.isAvailable && (
               <div className={styles.availabilityBadge}>
                 <div className={styles.dot}></div>
-                Available
+                합류 가능
               </div>
             )}
           </div>

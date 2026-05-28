@@ -1,34 +1,34 @@
 export const categories = [
   {
-    title: 'Frontend',
+    title: '프론트엔드',
     accent: 'primary',
     skills: [
       { name: 'React', percent: 90 },
-      { name: 'TypeScript', percent: 85 },
+      { name: 'TypeScript', percent: 70 },
     ],
   },
   {
-    title: 'Backend',
+    title: '백엔드',
     accent: 'info',
     skills: [
-      { name: 'Node.js', percent: 80 },
-      { name: 'API design', percent: 75 },
+      { name: 'Node.js', percent: 60 },
+      { name: 'Java', percent: 50 },
     ],
   },
   {
-    title: 'DevOps',
+    title: '퍼블리싱',
     accent: 'warning',
     skills: [
-      { name: 'CI/CD', percent: 70 },
-      { name: 'Containers', percent: 65 },
+      { name: 'HTML/CSS', percent: 95 },
+      { name: 'SCSS', percent: 90 },
     ],
   },
   {
-    title: 'Testing',
+    title: '도구',
     accent: 'success',
     skills: [
-      { name: 'Unit tests', percent: 85 },
-      { name: 'E2E', percent: 72 },
+      { name: 'Git/GitHub', percent: 85 },
+      { name: 'Figma', percent: 80 },
     ],
   },
 ]
