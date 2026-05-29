@@ -5,8 +5,8 @@ export const skillsHeader = {
     stats: [
         { value: '4', label: '카테고리' },
         { value: '15+', label: '기술 스택' },
-        { value: '∞', label: 'Potential' },
-        { value: '8', label: '프로젝트' },
+        { value: '1년 미만', label: '경력' },
+        { value: '9', label: '프로젝트' },
     ]
 }
 

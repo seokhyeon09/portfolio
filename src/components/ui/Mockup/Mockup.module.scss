@@ -53,21 +53,38 @@
    Desktop Mockup
    =========================== */
 .desktop {
-  width: 100%;
+  width: 92%; // Shrink slightly to fit the wider base
   max-width: 250px;
   max-height: 100%;
   aspect-ratio: 16/10;
   border-radius: $radius-sm $radius-sm 0 0;
-  border: 4px solid $border-default;
-  border-bottom: 8px solid $border-subtle;
+  border: 6px solid $border-default;
+  border-bottom: 8px solid $bg-page; // Bottom bezel of the screen
+  background: $border-default;
 
   .base {
     position: absolute;
     bottom: -14px;
-    width: 30%;
-    height: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 115%; // Wider than the screen to look like a laptop base
+    height: 12px;
     background: $border-subtle;
-    border-radius: 0 0 $radius-sm $radius-sm;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    // Small indent (trackpad/open notch)
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 4px;
+      background: $border-default;
+      border-radius: 0 0 4px 4px;
+    }
   }
 }
 

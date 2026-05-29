@@ -5,6 +5,7 @@ import Button from '../../ui/Button/Button';
 import Card from '../../ui/Card/Card';
 import { socialLinks } from '../../../utils/nav';
 import { icons } from '../../../utils/icons';
+import { allProjects } from '../../../utils/projectData';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -55,11 +56,11 @@ const Hero = () => {
               
               <div className={styles.stats}>
                 <div className={styles.stat}>
-                  <span className={styles.statValue}>∞</span>
-                  <span className={styles.statLabel}>잠재력</span>
+                  <span className={styles.statValue} style={{fontSize: '1.6rem'}}>1년 미만</span>
+                  <span className={styles.statLabel}>경력</span>
                 </div>
                 <div className={styles.stat}>
-                  <span className={styles.statValue}>8</span>
+                  <span className={styles.statValue}>{allProjects.length}</span>
                   <span className={styles.statLabel}>프로젝트</span>
                 </div>
                 <div className={styles.stat}>
