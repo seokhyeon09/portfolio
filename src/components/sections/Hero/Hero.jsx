@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import styles from './Hero.module.scss';
 import Button from '../../ui/Button/Button';
 import Card from '../../ui/Card/Card';
+import Hero3D from './Hero3D';
 import { socialLinks } from '../../../utils/nav';
 import { icons } from '../../../utils/icons';
 import { allProjects } from '../../../utils/projectData';
@@ -11,6 +12,7 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <section id="home" className={styles.hero}>
+      <Hero3D />
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.title}>
