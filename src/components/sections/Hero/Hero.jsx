@@ -17,7 +17,7 @@ const Hero = () => {
         <div className={styles.content}>
           <h1 className={styles.title}>
             끊임없이 질문하고<br />
-            코드로 성장하는 신입 개발자,<br />
+            코드로 성장하는 <span style={{ whiteSpace: 'nowrap' }}>신입 개발자,</span><br />
             <span className={styles.highlight}>정석현</span>입니다.
           </h1>
           <p className={styles.description}>
