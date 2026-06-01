@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Float, Text, Icosahedron } from '@react-three/drei';
 
 const FloatingSymbol = ({ text, position, color, rotation, speed, floatIntensity }) => {
@@ -49,6 +49,8 @@ const FloatingShape = ({ position, color, scale }) => {
 const MouseParallaxGroup = ({ children }) => {
   const groupRef = useRef();
   const mouse = useRef({ x: 0, y: 0 });
+  const { size } = useThree();
+  const isMobile = size.width <= 600;
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -75,7 +77,7 @@ const MouseParallaxGroup = ({ children }) => {
     groupRef.current.rotation.y += delta * 0.1;
   });
 
-  return <group ref={groupRef}>{children}</group>;
+  return <group ref={groupRef} scale={isMobile ? 0.6 : 1}>{children}</group>;
 };
 
 const Scene = () => {
