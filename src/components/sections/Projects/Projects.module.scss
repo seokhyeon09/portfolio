@@ -86,8 +86,16 @@
       flex-direction: column;
 
       h3 {
-        font-size: 2.2rem;
-        margin-bottom: $space-2;
+        font-size: 1.5rem;
+        margin-bottom: $space-3;
+        color: $text-primary;
+        font-weight: 700;
+
+        .projectNum {
+          color: $color-purple;
+          margin-right: $space-2;
+          font-family: 'Space Mono', monospace;
+        }
       }
 
       p {

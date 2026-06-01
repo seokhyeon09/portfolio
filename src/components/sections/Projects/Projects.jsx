@@ -28,7 +28,9 @@ const Projects = () => {
                 />
               </div>
               <div className={styles.content}>
-                <h3>{project.title}</h3>
+                <h3>
+                  <span className={styles.projectNum}>{String(project.id).padStart(2, '0')}.</span> {project.title}
+                </h3>
                 <p>{project.description}</p>
                 <div className={styles.tags}>
                   {project.tags.map((tag, i) => (
