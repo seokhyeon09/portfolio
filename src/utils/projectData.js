@@ -121,7 +121,7 @@ export const allProjects = [
     description: '파이썬 백엔드(FastAPI)와 네이버 쇼핑 API를 연동하여, 관심 상품을 실시간으로 검색하고 클라우드 DB(MongoDB)에 즐겨찾기로 관리할 수 있는 풀스택 웹 애플리케이션입니다.',
     tags: ['Python', 'FastAPI', 'MongoDB', 'Naver API'],
     type: 'backend',
-    demoLink: '',
+    demoLink: 'https://miniproject-python-scraping.vercel.app/',
     codeLink: 'https://github.com/seokhyeon09/miniproject-python-scraping',
     imageSrc: '/assets/images/miniproject-python-scraping.png',
     fallbackIcon: 'server',
