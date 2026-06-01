@@ -70,13 +70,13 @@
     display: flex;
     flex-direction: column;
 
-      .imagePlaceholder {
+    .imagePlaceholder {
       background: $bg-surface;
-      height: 250px;
+      height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: $space-4;
+      padding: $space-2;
     }
 
     .content {

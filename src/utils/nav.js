@@ -8,5 +8,5 @@ export const navItems = [
 
 export const socialLinks = {
   github: 'https://github.com/seokhyeon09',
-  notion: 'https://www.notion.so/Portfolio-3565b18cdc30809b8819de9c16a481d5',
+  notion: '',
 };

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import styles from './Projects.module.scss'
 import FadeUp from '../components/ui/FadeUp/FadeUp'
 import FadeInLeft from '../components/ui/FadeInLeft/FadeInLeft'
 import Mockup from '../components/ui/Mockup/Mockup'
+import PageHeader from '../components/ui/PageHeader/PageHeader'
+import CtaBanner from '../components/ui/CtaBanner/CtaBanner'
 import { icons } from '../utils/icons'
 import {
     projectsHeader,
@@ -13,7 +14,6 @@ import {
 } from '../utils/projectData'
 
 const Projects = () => {
-  const navigate = useNavigate()
   const [activeFilter, setActiveFilter] = useState('all')
 
   // Filter projects based on the active tab
@@ -27,20 +27,12 @@ const Projects = () => {
         
         {/* Header Section */}
         <FadeUp delay={0.1}>
-          <section className={styles.header}>
-            <span className={styles.label}>{projectsHeader.label}</span>
-            <h1 className={styles.title}>{projectsHeader.title}</h1>
-            <p className={styles.desc}>{projectsHeader.desc}</p>
-            
-            <div className={styles.stats}>
-              {projectsHeader.stats.map((stat, idx) => (
-                <div key={idx} className={styles.statItem}>
-                  <span className={styles.statValue}>{stat.value}</span>
-                  <span className={styles.statLabel}>{stat.label}</span>
-                </div>
-              ))}
-            </div>
-          </section>
+          <PageHeader 
+            label={projectsHeader.label}
+            title={projectsHeader.title}
+            descriptions={projectsHeader.desc}
+            stats={projectsHeader.stats}
+          />
         </FadeUp>
 
         {/* Filters Section */}
@@ -101,19 +93,13 @@ const Projects = () => {
 
         {/* CTA Banner */}
         <FadeUp delay={0.4}>
-          <section className={styles.banner}>
-            <span className={styles.badge}><icons.rocket size={16} style={{marginRight: '6px', marginBottom: '-2px'}} />{projectsBanner.badge}</span>
-            <h2>{projectsBanner.title}</h2>
-            <p>{projectsBanner.desc}</p>
-            <div className={styles.actions}>
-              <button className={styles.primaryBtn} onClick={() => window.open('mailto:example@gmail.com', '_blank')}>
-                <icons.mail size={18} style={{ marginRight: '8px' }} /> 지금 바로 연락하기
-              </button>
-              <button className={styles.secondaryBtn} onClick={() => navigate('/')}>
-                <icons.layout size={18} /> 홈으로 돌아가기
-              </button>
-            </div>
-          </section>
+          <CtaBanner 
+            badge={projectsBanner.badge}
+            title={projectsBanner.title}
+            desc={projectsBanner.desc}
+            primaryBtn={{ text: '지금 바로 연락하기', path: 'mailto:example@gmail.com', external: true, icon: icons.mail }}
+            secondaryBtn={{ text: '홈으로 돌아가기', path: '/', icon: icons.layout }}
+          />
         </FadeUp>
 
       </div>

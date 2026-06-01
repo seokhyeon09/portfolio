@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import styles from './About.module.scss'
 import { 
     aboutHeader, 
@@ -11,25 +10,21 @@ import {
 } from '../utils/aboutContent'
 import { icons } from '../utils/icons'
 import FadeUp from '../components/ui/FadeUp/FadeUp'
+import PageHeader from '../components/ui/PageHeader/PageHeader'
+import CtaBanner from '../components/ui/CtaBanner/CtaBanner'
 
 const About = () => {
-  const navigate = useNavigate()
-
   return (
     <div className={styles.aboutPage}>
       <div className={styles.container}>
         
         {/* Header Section */}
         <FadeUp delay={0.1}>
-          <section className={styles.header}>
-          <span className={styles.label}>{aboutHeader.label}</span>
-          <h1 className={styles.title}>{aboutHeader.title}</h1>
-          <div className={styles.descriptions}>
-            {aboutHeader.descriptions.map((desc, idx) => (
-              <p key={idx}>{desc}</p>
-            ))}
-          </div>
-          </section>
+          <PageHeader 
+            label={aboutHeader.label}
+            title={aboutHeader.title}
+            descriptions={aboutHeader.descriptions}
+          />
         </FadeUp>
 
         {/* Grid Layout Section */}
@@ -133,19 +128,13 @@ const About = () => {
 
         {/* CTA Banner */}
         <FadeUp delay={0.3}>
-          <section className={styles.banner}>
-          <span className={styles.badge}><icons.rocket size={16} style={{marginRight: '6px', marginBottom: '-2px'}} />{aboutBanner.badge}</span>
-          <h2>{aboutBanner.title}</h2>
-          <p>{aboutBanner.desc}</p>
-          <div className={styles.actions}>
-            <button className={styles.primaryBtn} onClick={() => navigate('/skills')}>
-              기술 보러가기
-            </button>
-            <button className={styles.secondaryBtn} onClick={() => navigate('/contact')}>
-              <icons.mail /> 협업 문의하기
-            </button>
-            </div>
-          </section>
+          <CtaBanner 
+            badge={aboutBanner.badge}
+            title={aboutBanner.title}
+            desc={aboutBanner.desc}
+            primaryBtn={{ text: '기술 보러가기', path: '/skills' }}
+            secondaryBtn={{ text: '협업 문의하기', path: '/contact', icon: icons.mail }}
+          />
         </FadeUp>
 
       </div>

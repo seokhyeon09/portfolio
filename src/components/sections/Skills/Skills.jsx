@@ -13,8 +13,8 @@ const Skills = () => {
           <h4 className={styles.sectionLabel}>SKILLS</h4>
           <h2 className={styles.sectionTitle}>My Tech Stack</h2>
           <p className={styles.description}>
-            사용자 경험과 데이터의 흐름을 함께 고민하는 개발자 정석현입니다.<br/>
-            React와 SCSS를 활용해 직관적이고 세련된 UI를 구현하는 것에 흥미가 있으며...
+            새로운 기술을 배우고 적용하는 것을 즐기는 신입 프론트엔드 개발자 정석현입니다.<br/>
+            React와 SCSS를 활용하여 사용자 친화적이고 직관적인 UI를 구현하는 데 관심이 많습니다.
           </p>
         </div>
         
@@ -30,7 +30,7 @@ const Skills = () => {
               <div className={styles.skillTags}>
                 {category.skills.map((skill, i) => (
                   <FadeInLeft key={i} delay={0.2 + (i * 0.1)}>
-                    <span className={styles.tag}>{skill.name}</span>
+                    <span className={`${styles.tag} ${styles[`tag_${skill.proficiency}`]}`}>{skill.name}</span>
                   </FadeInLeft>
                 ))}
               </div>

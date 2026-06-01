@@ -1,0 +1,215 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+
+  .sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: $space-4;
+  }
+}
+
+/* Social Links */
+.socialCard {
+  background: $bg-card;
+  border: 1px solid $border-default;
+  border-radius: $radius-lg;
+  padding: $space-2;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  .socialItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: $space-4;
+    border-radius: $radius-md;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+
+    &:hover {
+      background: $bg-surface;
+      
+      .socialIcon {
+        background: $color-purple;
+        color: white;
+      }
+      
+      .arrowIcon {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .socialIcon {
+      width: 48px;
+      height: 48px;
+      border-radius: $radius-md;
+      background: $bg-surface;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-secondary;
+      transition: all 0.3s ease;
+    }
+
+    .socialText {
+      flex: 1;
+
+      .title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $text-primary;
+        margin-bottom: 0.4rem;
+      }
+
+      .desc {
+        font-size: 1.4rem;
+        color: $text-tertiary;
+      }
+    }
+
+    .arrowIcon {
+      color: $text-tertiary;
+      opacity: 0.5;
+      transform: translateX(-4px);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .socialStats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $space-4 $space-2;
+    
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.2rem;
+      color: $text-tertiary;
+      
+      .icon {
+        color: #f59e0b; // Yellow/Orange for star/repos
+      }
+    }
+  }
+  
+  .badgeInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $space-4 $space-2;
+    
+    .badge {
+      font-size: 1.2rem;
+      color: #3b82f6; // Blue for role
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    
+    .location {
+      font-size: 1.2rem;
+      color: $text-tertiary;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+  }
+}
+
+/* Status Card */
+.statusCard {
+  background: $bg-card;
+  border: 1px solid $border-default;
+  border-radius: $radius-lg;
+  padding: $space-6;
+
+  .statusHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: $space-6;
+
+    .titleWrap {
+      .title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $text-primary;
+        margin-bottom: 0.4rem;
+      }
+
+      .desc {
+        font-size: 1.4rem;
+        color: $text-tertiary;
+      }
+    }
+
+    .availabilityBadge {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      padding: 0.6rem 1.2rem;
+      border-radius: $radius-full;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #10b981;
+        box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+      }
+    }
+  }
+
+  .statusList {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+
+    .statusItem {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+
+      .iconWrap {
+        color: $color-purple;
+      }
+
+      .itemText {
+        flex: 1;
+
+        .itemTitle {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $text-primary;
+          margin-bottom: 0.2rem;
+        }
+
+        .itemDesc {
+          font-size: 1.3rem;
+          color: $text-tertiary;
+        }
+      }
+
+      .checkIcon {
+        color: #10b981;
+      }
+    }
+  }
+}

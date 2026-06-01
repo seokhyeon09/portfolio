@@ -2,6 +2,7 @@
 @use '../../../styles/mixins' as *;
 
 .hero {
+  position: relative;
   min-height: 100vh;
   padding-top: $header-height;
   display: flex;
@@ -9,6 +10,9 @@
 
   .container {
     @include container;
+    position: relative;
+    z-index: 1;
+    pointer-events: none; // let clicks pass through to 3D canvas
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $space-10;
@@ -19,6 +23,10 @@
       text-align: center;
       gap: $space-8;
     }
+  }
+
+  .content {
+    pointer-events: auto;
   }
 
   .title {
@@ -78,6 +86,7 @@
   .profileCardWrapper {
     display: flex;
     justify-content: flex-end;
+    pointer-events: auto;
     
     @include mobile {
       justify-content: center;

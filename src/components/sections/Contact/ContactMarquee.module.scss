@@ -1,0 +1,33 @@
+@use '../../../styles/variables' as *;
+
+.marqueeWrapper {
+  width: 100%;
+  background: rgba(138, 115, 255, 0.15);
+  border-top: 1px solid rgba(138, 115, 255, 0.2);
+  border-bottom: 1px solid rgba(138, 115, 255, 0.2);
+  padding: 1.2rem 0;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: $space-16;
+
+  .marqueeContent {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    
+    span {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $text-primary;
+      padding: 0 4rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

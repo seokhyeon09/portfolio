@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import styles from './Skills.module.scss'
 import { 
     skillsHeader, 
@@ -11,10 +10,10 @@ import {
 import { icons } from '../utils/icons'
 import FadeUp from '../components/ui/FadeUp/FadeUp'
 import FadeInLeft from '../components/ui/FadeInLeft/FadeInLeft'
+import PageHeader from '../components/ui/PageHeader/PageHeader'
+import CtaBanner from '../components/ui/CtaBanner/CtaBanner'
 
 const Skills = () => {
-  const navigate = useNavigate()
-
   // Helper to convert proficiency to a lowercase class name
   const getProficiencyClass = (level) => {
     return level.toLowerCase()
@@ -26,20 +25,12 @@ const Skills = () => {
         
         {/* Header Section */}
         <FadeUp delay={0.1}>
-          <section className={styles.header}>
-          <span className={styles.label}>{skillsHeader.label}</span>
-          <h1 className={styles.title}>{skillsHeader.title}</h1>
-          <p className={styles.desc}>{skillsHeader.desc}</p>
-          
-          <div className={styles.stats}>
-            {skillsHeader.stats.map((stat, idx) => (
-              <div key={idx} className={styles.statItem}>
-                <span className={styles.statValue}>{stat.value}</span>
-                <span className={styles.statLabel}>{stat.label}</span>
-              </div>
-            ))}
-          </div>
-          </section>
+          <PageHeader 
+            label={skillsHeader.label}
+            title={skillsHeader.title}
+            descriptions={skillsHeader.desc}
+            stats={skillsHeader.stats}
+          />
         </FadeUp>
 
         {/* Main Skills Grid */}
@@ -125,19 +116,13 @@ const Skills = () => {
 
         {/* CTA Banner */}
         <FadeUp delay={0.3}>
-          <section className={styles.banner}>
-          <span className={styles.badge}><icons.rocket size={16} style={{marginRight: '6px', marginBottom: '-2px'}} />{skillsBanner.badge}</span>
-          <h2>{skillsBanner.title}</h2>
-          <p>{skillsBanner.desc}</p>
-          <div className={styles.actions}>
-            <button className={styles.primaryBtn} onClick={() => navigate('/projects')}>
-              프로젝트 보러가기
-            </button>
-            <button className={styles.secondaryBtn} onClick={() => navigate('/contact')}>
-              <icons.mail /> 협업 문의하기
-            </button>
-            </div>
-          </section>
+          <CtaBanner 
+            badge={skillsBanner.badge}
+            title={skillsBanner.title}
+            desc={skillsBanner.desc}
+            primaryBtn={{ text: '프로젝트 보러가기', path: '/projects' }}
+            secondaryBtn={{ text: '협업 문의하기', path: '/contact', icon: icons.mail }}
+          />
         </FadeUp>
 
       </div>

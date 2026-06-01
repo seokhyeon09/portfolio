@@ -10,18 +10,18 @@ const ContactCta = () => {
                   Ready to build something amazing together?
             </h1>
             <p className="txt">
-                  Placeholder blurb — add your pitch and preferred contact channels here.
+                  언제든 환영합니다! 아래 편하신 방법으로 연락해 주세요.
             </p>
             <div className={styles.cta}>
-                <a className='btn btn__primary btn__small' href="mailto:hello@gmail.com">
-                    Email
+                <a className='btn btn__primary btn__small' href="mailto:ring4392@gmail.com">
+                    이메일
                 </a>
-                  <button className='btn  btn__small btn__ghost'  type='button'>
-                    LinkedIn
-                </button>
-                  <button className='btn  btn__small btn__ghost'  type='button'>
-                    Github
-                </button>
+                  <a className='btn  btn__small btn__ghost' href="#" target="_blank" rel="noreferrer">
+                    노션
+                </a>
+                  <a className='btn  btn__small btn__ghost' href="https://github.com/seokhyeon09" target="_blank" rel="noreferrer">
+                    깃허브
+                </a>
             </div>
         </div>
     </section>

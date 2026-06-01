@@ -1,0 +1,87 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.header {
+  text-align: center;
+  margin-bottom: $space-16;
+
+  .label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(138, 115, 255, 0.1);
+    color: $color-purple;
+    border: 1px solid rgba(138, 115, 255, 0.2);
+    padding: 0.6rem 1.6rem;
+    border-radius: $radius-full;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: $space-4;
+  }
+
+  .title {
+    font-size: 4.8rem;
+    font-weight: 800;
+    margin-bottom: $space-4;
+    color: $text-primary;
+    
+    @include mobile {
+      font-size: 3.6rem;
+    }
+  }
+
+  .desc {
+    color: $text-secondary;
+    font-size: 1.6rem;
+    margin-bottom: $space-10;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: $space-8;
+    
+    @include mobile {
+      flex-wrap: wrap;
+      gap: $space-6;
+    }
+
+    .statItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+
+      .statHeader {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        
+        .statIcon {
+          color: $color-purple;
+        }
+        
+        .statValue {
+          font-size: 2.4rem;
+          font-weight: 800;
+          color: $text-primary;
+        }
+      }
+
+      .statLabel {
+        color: $text-tertiary;
+        font-size: 1.4rem;
+      }
+    }
+    
+    .statDivider {
+      width: 1px;
+      background: $border-subtle;
+      
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
