@@ -54,7 +54,7 @@
    =========================== */
 .desktop {
   width: 92%; // Shrink slightly to fit the wider base
-  max-width: 250px;
+  max-width: 280px;
   max-height: 100%;
   aspect-ratio: 16/10;
   border-radius: $radius-sm $radius-sm 0 0;
@@ -93,7 +93,7 @@
    =========================== */
 .tablet {
   height: 100%;
-  max-height: 200px;
+  max-height: 240px;
   aspect-ratio: 3/4;
   border-radius: $radius-lg;
   border: 8px solid $border-default;
@@ -117,7 +117,7 @@
    =========================== */
 .mobile {
   height: 100%;
-  max-height: 200px;
+  max-height: 240px;
   aspect-ratio: 9/19;
   border-radius: 24px;
   border: 6px solid $border-default;
