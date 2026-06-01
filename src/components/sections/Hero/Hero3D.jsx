@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Float, Text, Icosahedron } from '@react-three/drei';
+import { ThemeContext } from '../../../context/themeContext';
 
-const FloatingSymbol = ({ text, position, color, rotation, speed, floatIntensity }) => {
+const FloatingSymbol = ({ text, position, color, rotation, speed, floatIntensity, isDark }) => {
   return (
     <Float speed={speed} rotationIntensity={1.5} floatIntensity={floatIntensity} position={position}>
       <Text
@@ -23,14 +24,14 @@ const FloatingSymbol = ({ text, position, color, rotation, speed, floatIntensity
           roughness={0.2} 
           metalness={0.8} 
           emissive={color}
-          emissiveIntensity={0.6} // 💡 밝게 빛나도록 설정 (다크/라이트 모두 잘 보임)
+          emissiveIntensity={isDark ? 0.3 : 0.6} // 💡 다크 모드일 때 빛 발산 줄임
         />
       </Text>
     </Float>
   );
 };
 
-const FloatingShape = ({ position, color, scale }) => {
+const FloatingShape = ({ position, color, scale, isDark }) => {
   return (
     <Float speed={2} rotationIntensity={2} floatIntensity={2} position={position}>
       <Icosahedron args={[1, 0]} scale={scale}>
@@ -38,7 +39,7 @@ const FloatingShape = ({ position, color, scale }) => {
           color={color} 
           wireframe={true} 
           emissive={color}
-          emissiveIntensity={0.5}
+          emissiveIntensity={isDark ? 0.2 : 0.5}
         />
       </Icosahedron>
     </Float>
@@ -81,36 +82,49 @@ const MouseParallaxGroup = ({ children }) => {
 };
 
 const Scene = () => {
+  const { theme } = useContext(ThemeContext);
+  const isDark = theme === 'dark';
+
   return (
     <MouseParallaxGroup>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
+      <ambientLight intensity={isDark ? 0.2 : 0.5} />
+      <directionalLight position={[10, 10, 5]} intensity={isDark ? 0.5 : 1} />
       <directionalLight position={[-10, -10, -5]} intensity={0.5} color="#6366f1" />
       
-      {/* Symbols */}
+      {/* Symbols - 더 바깥쪽으로 위치 이동 */}
       {/* React: 밝은 시안색 */}
-      <FloatingSymbol text="React" position={[-4, 2, -2]} color="#00e1ff" rotation={[0.2, 0.4, 0]} speed={1.5} floatIntensity={2} />
+      <FloatingSymbol text="React" position={[-6, 3.5, -2]} color="#00e1ff" rotation={[0.2, 0.4, 0]} speed={1.5} floatIntensity={2} isDark={isDark} />
       {/* JS: 밝은 노란색 */}
-      <FloatingSymbol text="JS" position={[4, 1.5, -1]} color="#ffea00" rotation={[-0.2, -0.3, 0]} speed={2} floatIntensity={2.5} />
+      <FloatingSymbol text="JS" position={[6, 2.5, -1]} color="#ffea00" rotation={[-0.2, -0.3, 0]} speed={2} floatIntensity={2.5} isDark={isDark} />
       {/* CSS: 밝은 파란색 */}
-      <FloatingSymbol text="CSS" position={[-3, -2, 0]} color="#4d7cff" rotation={[0.1, 0.1, 0.1]} speed={1.8} floatIntensity={1.5} />
+      <FloatingSymbol text="CSS" position={[-5, -3.5, 0]} color="#4d7cff" rotation={[0.1, 0.1, 0.1]} speed={1.8} floatIntensity={1.5} isDark={isDark} />
       {/* Braces: 보라색 */}
-      <FloatingSymbol text="{ }" position={[3, -2, -3]} color="#c084fc" rotation={[0, -0.5, 0]} speed={1.2} floatIntensity={3} />
+      <FloatingSymbol text="{ }" position={[5, -3, -3]} color="#c084fc" rotation={[0, -0.5, 0]} speed={1.2} floatIntensity={3} isDark={isDark} />
       {/* HTML tags: 민트/그린 */}
-      <FloatingSymbol text="< />" position={[0, 3, -4]} color="#34d399" rotation={[0.3, 0, 0]} speed={2.2} floatIntensity={2} />
+      <FloatingSymbol text="< />" position={[0, 4.5, -4]} color="#34d399" rotation={[0.3, 0, 0]} speed={2.2} floatIntensity={2} isDark={isDark} />
 
       {/* Shapes */}
-      <FloatingShape position={[5, -3, -5]} color="#818cf8" scale={0.8} />
-      <FloatingShape position={[-5, -1, -6]} color="#facc15" scale={1.2} />
-      <FloatingShape position={[0, -4, -2]} color="#fb7185" scale={0.6} />
+      <FloatingShape position={[6, -4, -5]} color="#818cf8" scale={0.8} isDark={isDark} />
+      <FloatingShape position={[-6, -1, -6]} color="#facc15" scale={1.2} isDark={isDark} />
+      <FloatingShape position={[0, -5.5, -2]} color="#fb7185" scale={0.6} isDark={isDark} />
     </MouseParallaxGroup>
   );
 };
 
 const Hero3D = () => {
   return (
-    // pointerEvents: 'none'으로 설정하여 드래그/클릭을 가로막지 않고, 전역 마우스 이벤트를 통해 패럴랙스 효과를 줌
-    <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0, pointerEvents: 'none' }}>
+    // height를 늘리고, 마스크를 적용하여 아래쪽 경계를 부드럽게 페이드 아웃 처리
+    <div style={{ 
+      width: '100vw', 
+      height: '150vh', 
+      position: 'absolute', 
+      top: 0, 
+      left: 0, 
+      zIndex: 0, 
+      pointerEvents: 'none',
+      maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+      WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)'
+    }}>
       <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
         <Scene />
       </Canvas>
