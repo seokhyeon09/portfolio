@@ -10,7 +10,7 @@ export const allProjects = [
   {
     id: 1,
     title: 'React Timer',
-    description: 'React Hooks의 특성을 깊이 있게 활용하여 개발한 웹 기반 타이머 애플리케이션으로, 초 단위 시간 데이터를 안정적으로 다룹니다.',
+    description: 'React Hooks의 특성을 깊이 있게 활용하여 개발한 웹 기반 타이머 애플리케이션으로, 초 단위 시간 데이터를 안정적으로 다룬 프로젝트 입니다.',
     tags: ['React Hooks', 'useState', 'useRef'],
     type: 'web',
     demoLink: 'https://react-timer-rosy.vercel.app/',
@@ -22,7 +22,7 @@ export const allProjects = [
   {
     id: 2,
     title: 'Router Exam',
-    description: 'React Router를 핵심으로 활용하여 홈, 커뮤니티 게시판, 할 일 관리 등 여러 기능을 하나의 단일 페이지 애플리케이션(SPA)으로 통합한 프로젝트입니다.',
+    description: 'React Router DOM의 동적 라우팅을 활용하여 커뮤니티 게시판과 전역 상태 기반의 Todo 앱 등 여러 독립적인 기능을 하나의 SPA(Single Page Application)로 성공적으로 통합한 프로젝트입니다.',
     tags: ['React Router DOM', 'Context API', 'Swiper.js', 'SPA'],
     type: 'web',
     demoLink: 'https://router-exam.vercel.app/',
@@ -34,7 +34,7 @@ export const allProjects = [
   {
     id: 3,
     title: 'Weather OpenAPI',
-    description: 'OpenWeather API를 활용하여 실시간 기상 정보를 제공하는 동적 웹 애플리케이션입니다.',
+    description: 'Axios를 통한 OpenWeather API 비동기 통신으로 실시간 기상 데이터를 연동하고, 환경 변수(.env)를 활용한 API Key 보안과 날씨에 따른 동적 UI 렌더링을 구현한 프로젝트입니다.',
     tags: ['React', 'Axios', 'OpenWeather API', '.env'],
     type: 'web',
     demoLink: 'https://react-weather-openapi.vercel.app/',
@@ -58,7 +58,7 @@ export const allProjects = [
   {
     id: 5,
     title: 'Emotion Diary',
-    description: '사용자의 감정 상태와 일상을 기록할 수 있는 웹 기반 다이어리 애플리케이션입니다.',
+    description: 'Context API와 useReducer를 결합하여 전역 상태 관리를 구현하고, LocalStorage를 활용한 비휘발성 데이터 보존 및 동적 라우팅 방어 로직을 적용한 다이어리 웹 애플리케이션입니다.',
     tags: ['React 19', 'Context API', 'useReducer', 'LocalStorage'],
     type: 'web',
     demoLink: 'https://react-emotion-diary-rho.vercel.app/',
@@ -70,7 +70,7 @@ export const allProjects = [
   {
     id: 6,
     title: 'Cooling Spot',
-    description: '서울시 내 무더위 쉼터 위치를 시각적으로 제공하고, 원하는 장소를 검색 및 즐겨찾기 할 수 있는 지도 기반 웹 애플리케이션입니다.',
+    description: 'Kakao Maps API를 비동기적으로 로드하여 다중 마커를 렌더링하고, Context API 및 LocalStorage를 활용해 즐겨찾기 상태를 전역으로 관리하는 지도 기반 웹 애플리케이션입니다.',
     tags: ['React', 'Kakao Maps API'],
     type: 'web',
     demoLink: 'https://miniproject-coolingcenter.vercel.app/map',
@@ -82,7 +82,7 @@ export const allProjects = [
   {
     id: 7,
     title: 'Kia selling',
-    description: '기아(Kia)의 차량 판매 및 브랜드 홍보를 위한 웹사이트를 프론트엔드 관점에서 새롭게 리디자인한 프로젝트입니다.',
+    description: '데이터 모듈화를 통해 컴포넌트 재사용성을 높이고, SCSS와 Swiper.js를 활용하여 다이내믹한 슬라이드 애니메이션과 기기별 해상도 대응(반응형)을 구현한 웹사이트 리디자인 프로젝트입니다.',
     tags: ['React', 'SCSS', 'Swiper'],
     type: 'web',
     demoLink: 'https://react-tocobo-kia-ver.vercel.app/',
@@ -94,7 +94,7 @@ export const allProjects = [
   {
     id: 8,
     title: 'Save Point',
-    description: '잊지 못할 게임의 순간들, 당신의 여정을 저장할 SavePoint 프로젝트입니다.',
+    description: 'Spring Boot와 AWS S3를 활용하여 RESTful API 및 이미지 저장을 구현하고, Kakao OAuth 2.0 기반 인증과 Docker 컨테이너 및 커스텀 도메인 연동 배포까지 구축한 풀스택 프로젝트입니다.',
     tags: ['React', 'Spring Boot', 'AWS S3', 'Kakao Login api'],
     type: 'backend',
     demoLink: 'http://savepoint.kro.kr/',
@@ -106,7 +106,7 @@ export const allProjects = [
   {
     id: 9,
     title: 'Portfolio V1',
-    description: '지금 보고 계신 이 포트폴리오 웹사이트입니다. 반응형 디자인과 재사용 가능한 컴포넌트 구조로 설계했습니다.',
+    description: '지금 보고 계신 이 포트폴리오 웹사이트입니다. 반응형 디자인과 재사용 가능한 컴포넌트 구조로 설계한 웹 어플리케이션 입니다.',
     tags: ['React 19', 'SCSS', 'Three.js'],
     type: 'web',
     demoLink: 'https://app.notion.com/p/Portfolio-3565b18cdc30809b8819de9c16a481d5',
