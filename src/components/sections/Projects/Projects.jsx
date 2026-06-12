@@ -3,6 +3,7 @@ import styles from './Projects.module.scss';
 import Card from '../../ui/Card/Card';
 import Mockup from '../../ui/Mockup/Mockup';
 import { featuredProjects } from '../../../utils/projectData';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   return (
@@ -44,6 +45,11 @@ const Projects = () => {
               </div>
             </Card>
           ))}
+        </div>
+        <div className={styles.moreProjects}>
+          <Link to="/projects" className={styles.moreButton}>
+            더 많은 프로젝트 보기
+          </Link>
         </div>
       </div>
     </section>
