@@ -126,6 +126,18 @@ export const allProjects = [
     imageSrc: '/assets/images/miniproject-python-scraping.png',
     fallbackIcon: 'server',
     deviceType: 'desktop'
+  },
+  {
+    id: 11,
+    title: 'ForexMonitor',
+    description: '실시간 환율 API 연동 및 LocalStorage 기반 상태 관리를 활용하여 외화 자산 매수/매도 시 기초자금 차감 로직을 구현한 외환 자산 모니터링 애플리케이션입니다.',
+    tags: ['React', 'API 연동', 'LocalStorage', '프롬프트 엔지니어링'],
+    type: 'web',
+    demoLink: 'https://forexmonitor-beryl.vercel.app/',
+    codeLink: 'https://github.com/seokhyeon09/ForexMonitor',
+    imageSrc: '/assets/images/ForexMonitor.png',
+    fallbackIcon: 'dollarSign',
+    deviceType: 'desktop'
   }
 ];
 

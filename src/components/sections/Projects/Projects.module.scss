@@ -149,4 +149,28 @@
       }
     }
   }
+
+  .moreProjects {
+    display: flex;
+    justify-content: center;
+    margin-top: $space-10;
+
+    .moreButton {
+      background-color: $color-indigo;
+      color: white;
+      padding: 1.2rem 2.8rem;
+      border-radius: $radius-full;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+
+      &:hover {
+        background-color: $color-purple;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+      }
+    }
+  }
 }
