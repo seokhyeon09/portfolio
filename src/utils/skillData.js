@@ -15,7 +15,6 @@ export const skillData = [
         key: 'language',
         icon: 'bolt',
         title: 'Language',
-        badge: 'Core',
         skills: [
             { name: 'JavaScript / ES6+', proficiency: 'Advanced' },
             { name: 'TypeScript', proficiency: 'Learning' },
@@ -27,12 +26,10 @@ export const skillData = [
         key: 'frontend',
         icon: 'monitor',
         title: 'Front-end',
-        badge: 'Main',
         skills: [
             { name: 'React', proficiency: 'Advanced' },
             { name: 'SCSS / Styled Components', proficiency: 'Advanced' },
             { name: 'Tailwind CSS', proficiency: 'Intermediate' },
-            { name: 'Next.js', proficiency: 'Basic' },
             { name: 'Open API & Crawling', proficiency: 'Learning' }
         ]
     },
@@ -40,7 +37,6 @@ export const skillData = [
         key: 'backend',
         icon: 'server',
         title: 'Back-end',
-        badge: 'Growing',
         skills: [
             { name: 'Spring Boot', proficiency: 'Basic' },
             { name: 'Node.js / Express', proficiency: 'Learning' },
@@ -52,13 +48,13 @@ export const skillData = [
         key: 'tool',
         icon: 'pin',
         title: 'Tool',
-        badge: 'Daily',
         skills: [
             { name: 'Git / GitHub', proficiency: 'Intermediate' },
             { name: 'Figma', proficiency: 'Intermediate' },
             { name: 'Notion', proficiency: 'Advanced' },
             { name: 'Docker', proficiency: 'Learning' },
-            { name: 'AWS Cloud', proficiency: 'Learning' }
+            { name: 'AWS Cloud', proficiency: 'Learning' },
+            { name: 'Unity', proficiency: 'Learning' }
         ]
     }
 ];
@@ -98,10 +94,10 @@ export const learningSkills = {
             desc: 'React 프로젝트에 점진적으로 TypeScript를 도입하며 타입 안전성의 중요성을 체감하고 있습니다.'
         },
         {
-            name: 'Next.js 14',
-            badge: 'React 풀스택 프레임워크',
+            name: 'Unity',
+            badge: '게임 엔진 및 인터랙티브 콘텐츠',
             color: '#ffffff', // white
-            desc: 'App Router와 Server Components를 기반으로 SSR, SSG의 차이를 이해하고 성능 최적화 전략을 실무에 적용하는 방법을 익히고 있습니다.'
+            desc: 'C# 스크립팅과 컴포넌트 기반 아키텍처를 활용하여 2D/3D 로직을 구현하고 유니티 엔진의 생태계를 새롭게 학습하고 있습니다.'
         },
         {
             name: 'Open API & Crawling',

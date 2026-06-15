@@ -9,6 +9,7 @@ import ThemeProvider from './context/ThemeProvider'
 
 import Header from './components/layout/Header/Header'
 import Footer from './components/layout/Footer/Footer'
+import ScrollToTop from './components/layout/ScrollToTop'
 
 function NotFound() {
   return (
@@ -22,6 +23,7 @@ function NotFound() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <ThemeProvider>
         <Header />
         <Routes>
