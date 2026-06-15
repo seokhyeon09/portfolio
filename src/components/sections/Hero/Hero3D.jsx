@@ -93,19 +93,19 @@ const Scene = () => {
       
       {/* Symbols - 더 바깥쪽으로 위치 이동 */}
       {/* React: 밝은 시안색 */}
-      <FloatingSymbol text="React" position={[-6, 3.5, -2]} color="#00e1ff" rotation={[0.2, 0.4, 0]} speed={1.5} floatIntensity={2} isDark={isDark} />
-      {/* JS: 밝은 노란색 */}
-      <FloatingSymbol text="JS" position={[6, 2.5, -1]} color="#ffea00" rotation={[-0.2, -0.3, 0]} speed={2} floatIntensity={2.5} isDark={isDark} />
+      <FloatingSymbol text="React" position={[-7.5, 4.5, -2]} color="#00e1ff" rotation={[0.2, 0.4, Math.PI / 4]} speed={1.5} floatIntensity={2} isDark={isDark} />
+      {/* JS: 밝은 노란색 (90도 회전) */}
+      <FloatingSymbol text="JS" position={[7, 3, -1]} color="#ffea00" rotation={[-0.2, -0.3, -Math.PI / 2]} speed={2} floatIntensity={2.5} isDark={isDark} />
       {/* CSS: 밝은 파란색 */}
-      <FloatingSymbol text="CSS" position={[-5, -3.5, 0]} color="#4d7cff" rotation={[0.1, 0.1, 0.1]} speed={1.8} floatIntensity={1.5} isDark={isDark} />
+      <FloatingSymbol text="CSS" position={[0, -1.5, 0]} color="#4d7cff" rotation={[0.1, 0.1, 0.1]} speed={1.8} floatIntensity={1.5} isDark={isDark} />
       {/* Braces: 보라색 */}
-      <FloatingSymbol text="{ }" position={[5, -3, -3]} color="#c084fc" rotation={[0, -0.5, 0]} speed={1.2} floatIntensity={3} isDark={isDark} />
+      <FloatingSymbol text="{ }" position={[8, -1.5, -3]} color="#c084fc" rotation={[0, -0.5, 0]} speed={1.2} floatIntensity={3} isDark={isDark} />
       {/* HTML tags: 민트/그린 */}
       <FloatingSymbol text="< />" position={[0, 4.5, -4]} color="#34d399" rotation={[0.3, 0, 0]} speed={2.2} floatIntensity={2} isDark={isDark} />
 
       {/* Shapes */}
-      <FloatingShape position={[6, -4, -5]} color="#818cf8" scale={0.8} isDark={isDark} />
-      <FloatingShape position={[-6, -1, -6]} color="#facc15" scale={1.2} isDark={isDark} />
+      <FloatingShape position={[4, -5, -5]} color="#818cf8" scale={0.8} isDark={isDark} />
+      <FloatingShape position={[-9, -3, -6]} color="#facc15" scale={1.2} isDark={isDark} />
       <FloatingShape position={[0, -5.5, -2]} color="#fb7185" scale={0.6} isDark={isDark} />
     </MouseParallaxGroup>
   );
@@ -125,7 +125,7 @@ const Hero3D = () => {
       maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
       WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)'
     }}>
-      <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+      <Canvas camera={{ position: [0, 0, 14], fov: 45 }}>
         <Scene />
       </Canvas>
     </div>
