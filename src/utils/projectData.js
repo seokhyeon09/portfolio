@@ -138,6 +138,18 @@ export const allProjects = [
     imageSrc: '/assets/images/ForexMonitor.png',
     fallbackIcon: 'dollarSign',
     deviceType: 'desktop'
+  },
+  {
+    id: 12,
+    title: 'Unity Survivor',
+    description: 'Unity 6 엔진과 C#을 기반으로 2D 탑다운 서바이벌 게임을 개발하고, Vercel을 통한 WebGL 자동 배포 파이프라인(CI/CD)을 구축한 프로젝트입니다.',
+    tags: ['Unity 6', 'C#', 'WebGL', 'CI/CD'],
+    type: 'web',
+    demoLink: 'https://webgl-unity-survivor.vercel.app/',
+    codeLink: 'https://github.com/seokhyeon09/unity-survivor',
+    imageSrc: '/assets/images/Unity Survivor.png',
+    fallbackIcon: 'gamepad',
+    deviceType: 'desktop'
   }
 ];
 
