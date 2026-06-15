@@ -9,13 +9,20 @@ const Projects = () => {
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h4 className={styles.sectionLabel}>PROJECTS</h4>
-          <h2 className={styles.sectionTitle}>My Works</h2>
-          <p className={styles.description}>
-            지금까지 제가 주도적으로 고민하고 개발한 주요 프로젝트들입니다.<br/>
-            문제 해결 과정과 실무에 적용한 다양한 기술 스택의 활용을 중심으로 소개합니다.
-          </p>
+        <div className={styles.headerWrapper}>
+          <div className={styles.header}>
+            <h4 className={styles.sectionLabel}>PROJECTS</h4>
+            <h2 className={styles.sectionTitle}>My Works</h2>
+            <p className={styles.description}>
+              지금까지 제가 주도적으로 고민하고 개발한 주요 프로젝트들입니다.<br/>
+              문제 해결 과정과 실무에 적용한 다양한 기술 스택의 활용을 중심으로 소개합니다.
+            </p>
+          </div>
+          <div className={styles.moreProjects}>
+            <Link to="/projects" className={styles.moreButton}>
+              더 많은 프로젝트 보기
+            </Link>
+          </div>
         </div>
         <div className={styles.grid}>
           {featuredProjects.map((project, idx) => (
@@ -45,11 +52,6 @@ const Projects = () => {
               </div>
             </Card>
           ))}
-        </div>
-        <div className={styles.moreProjects}>
-          <Link to="/projects" className={styles.moreButton}>
-            더 많은 프로젝트 보기
-          </Link>
         </div>
       </div>
     </section>

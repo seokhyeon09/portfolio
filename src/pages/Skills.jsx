@@ -47,7 +47,6 @@ const Skills = () => {
                     </div>
                     <h2>{category.title}</h2>
                   </div>
-                  <span className={styles.badge}>{category.badge}</span>
                 </div>
                 
                 <div className={styles.skillList}>
